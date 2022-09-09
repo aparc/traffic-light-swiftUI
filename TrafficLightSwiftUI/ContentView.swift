@@ -25,9 +25,9 @@ struct ContentView: View {
     
     private var semaphore: some View {
         VStack(spacing: 20) {
-            CircleView(color: .red, selectedColor: $currentColor)
-            CircleView(color: .yellow, selectedColor: $currentColor)
-            CircleView(color: .green, selectedColor: $currentColor)
+            CircleView(color: .red, selectedColor: currentColor)
+            CircleView(color: .yellow, selectedColor: currentColor)
+            CircleView(color: .green, selectedColor: currentColor)
         }
     }
     
@@ -49,11 +49,11 @@ struct ContentView: View {
     
     private func changeColor() {
         switch currentColor {
-        case Color.red:
+        case .red:
             currentColor = .yellow
-        case Color.yellow:
+        case .yellow:
             currentColor = .green
-        case Color.green:
+        case .green:
             currentColor = .red
         default:
             currentColor = .red

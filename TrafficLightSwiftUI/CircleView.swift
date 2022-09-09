@@ -10,7 +10,7 @@ import SwiftUI
 struct CircleView: View {
     
     let color: Color
-    @Binding var selectedColor: Color
+    let selectedColor: Color
     
     var body: some View {
         Circle()
@@ -25,6 +25,6 @@ struct CircleView: View {
 
 struct CircleView_Previews: PreviewProvider {
     static var previews: some View {
-        CircleView(color: .red, selectedColor: .constant(.green))
+        CircleView(color: .red, selectedColor: .gray)
     }
 }
